@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" style="color-scheme: dark;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Astra Print 3D — Figuras, arte y regalos personalizados</title>
+<meta name="description" content="Impresión 3D personalizada en Colombia: figuras, llaveros con nombre, decoración y regalos. Cotiza por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Figtree:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#060a18; --bg2:#0b1226; --ink:#eaf1ff; --mute:#9aa9c9;
+  --cyan:#43d3f5; --gold:#f4b942; --violet:#b66cf5; --line:#1c2a4d;
+  --head:"Unbounded","Trebuchet MS",sans-serif; --body:"Figtree","Segoe UI",Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root[data-theme="light"]{--bg:#060a18}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.1;margin:0}
+h2{font-size:clamp(1.5rem,4vw,2.3rem);margin-bottom:12px}
+p{margin:0}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--cyan);transition:transform .15s,background .15s}
+.btn.main{background:var(--cyan);color:#04101c}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{color:var(--cyan)}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-family:var(--head);font-weight:700;letter-spacing:.04em;text-decoration:none;font-size:1.05rem}
+.brand span{color:var(--gold)}
+nav .links{display:flex;gap:22px;font-size:.95rem}
+nav .links a{text-decoration:none;color:var(--mute)}
+nav .links a:hover{color:var(--ink)}
+@media(max-width:560px){nav .links a.opt{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:48px 0 80px}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero p.lead{color:var(--mute);max-width:46ch;margin-bottom:28px;font-size:1.15rem}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+.stage{display:grid;place-items:center;perspective:900px;min-height:300px}
+.cube{width:150px;height:150px;position:relative;transform-style:preserve-3d;animation:spin 16s linear infinite}
+.cube i{position:absolute;inset:0;border:2px solid var(--cyan);background:rgba(67,211,245,.07);box-shadow:inset 0 0 28px rgba(67,211,245,.25)}
+.cube i:nth-child(1){transform:translateZ(75px)}
+.cube i:nth-child(2){transform:rotateY(180deg) translateZ(75px)}
+.cube i:nth-child(3){transform:rotateY(90deg) translateZ(75px);border-color:var(--violet)}
+.cube i:nth-child(4){transform:rotateY(-90deg) translateZ(75px);border-color:var(--violet)}
+.cube i:nth-child(5){transform:rotateX(90deg) translateZ(75px)}
+.cube i:nth-child(6){transform:rotateX(-90deg) translateZ(75px)}
+.cube b{position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);transform:translateZ(0)}
+@keyframes spin{from{transform:rotateX(-22deg) rotateY(0)}to{transform:rotateX(-22deg) rotateY(360deg)}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-bottom:50px}.stage{order:-1;min-height:220px}.cube{transform:scale(.8)}}
+
+/* sections */
+section{padding:70px 0;border-top:1px solid var(--line)}
+.sub{color:var(--mute);max-width:56ch;margin-bottom:34px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.cat{padding:24px 20px 22px;border:1px solid var(--line);background:linear-gradient(160deg,var(--bg2),var(--bg));border-radius:18px 18px 18px 4px;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end}
+.cat h3{font-size:1rem;margin-bottom:8px}
+.cat p{font-size:.95rem;color:var(--mute)}
+.cat:nth-child(1){border-top:3px solid var(--cyan)}
+.cat:nth-child(2){border-top:3px solid var(--violet)}
+.cat:nth-child(3){border-top:3px solid var(--gold)}
+.cat:nth-child(4){border-top:3px solid var(--cyan)}
+.cat:nth-child(5){border-top:3px solid var(--violet)}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:18px;border-top:2px solid var(--line);position:relative}
+.steps li::before{content:counter(s);position:absolute;top:-17px;left:0;width:32px;height:32px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:var(--head);font-size:.85rem}
+.steps h3{font-size:1rem;margin-bottom:6px}
+.steps p{color:var(--mute);font-size:.97rem}
+
+.cta{text-align:center;padding:84px 0}
+.cta h2{max-width:20ch;margin:0 auto 14px}
+.cta p{color:var(--mute);margin:0 auto 28px;max-width:46ch}
+.cta .url{display:block;margin-top:16px;font-size:.9rem;color:var(--mute)}
+
+footer{border-top:1px solid var(--line);padding:30px 0 36px;color:var(--mute);font-size:.93rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--cyan)}
+
+/* galería */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.grid figure{margin:0;position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg2)}
+.grid img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;cursor:zoom-in}
+.grid figcaption{padding:10px 14px;font-size:.93rem;color:var(--mute)}
+.grid .del{position:absolute;top:8px;right:8px;background:rgba(6,10,24,.85);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+.empty{color:var(--mute);border:1px dashed var(--line);border-radius:14px;padding:28px;text-align:center}
+#owner{border:1px solid var(--gold);border-radius:16px;padding:20px;margin-bottom:26px;background:var(--bg2)}
+#owner h3{font-size:1rem;margin-bottom:6px}
+#owner p{color:var(--mute);font-size:.93rem;margin-bottom:14px}
+#owner .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+#owner input[type=text]{flex:1 1 200px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+#owner input[type=file]{flex:1 1 220px;color:var(--mute);font:inherit;font-size:.9rem}
+#owner button{cursor:pointer;font:inherit;font-weight:600}
+#status{margin-top:12px;font-size:.93rem;color:var(--gold);min-height:1.2em}
+dialog{border:0;background:transparent;padding:0;max-width:92vw;max-height:92vh}
+dialog::backdrop{background:rgba(3,6,14,.9)}
+dialog img{max-width:92vw;max-height:88vh;display:block;border-radius:12px}
+dialog button{position:absolute;top:8px;right:8px}
+@media(prefers-reduced-motion:reduce){.cube{animation:none;transform:rotateX(-22deg) rotateY(35deg)}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#inicio">ASTRA <span>PRINT</span></a>
+    <div class="links">
+      <a class="opt" href="#creaciones">Creaciones</a>
+      <a class="opt" href="#galeria">Galería</a>
+      <a class="opt" href="#proceso">Cómo pedir</a>
+      <a href="#cotizar">Cotizar</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="inicio">
+    <div>
+      <h1>Tus ideas, hechas realidad en <em>3D</em></h1>
+      <p class="lead">Figuras, arte y regalos personalizados. Nos cuentas qué imaginas, lo diseñamos e imprimimos, y te lo enviamos a cualquier ciudad de Colombia.</p>
+      <div class="acts">
+        <a class="btn main" href="https://w.app/pmyacs" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn ghost" href="#creaciones">Ver qué hacemos</a>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></div></div>
+  </header>
+</div>
+
+<section id="creaciones">
+  <div class="wrap">
+    <h2>Lo que podemos crear</h2>
+    <p class="sub">Si lo puedes imaginar, probablemente lo podemos imprimir. Estas son las líneas que más nos piden.</p>
+    <div class="cats">
+      <article class="cat"><h3>Figuras de anime y juegos</h3><p>Personajes y coleccionables con detalle, listos para exhibir.</p></article>
+      <article class="cat"><h3>Llaveros y nombres</h3><p>Con el nombre de quien tú elijas: Mateo, Sofía o el que quieras.</p></article>
+      <article class="cat"><h3>Personajes</h3><p>Versiones tuyas, de tu mascota o de quien quieras sorprender.</p></article>
+      <article class="cat"><h3>Decoración</h3><p>Materas, lámparas y piezas con formas que no se encuentran en tiendas.</p></article>
+      <article class="cat"><h3>Regalos personalizados</h3><p>Cumpleaños, aniversarios o fechas especiales, hechos a tu medida.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <h2>Galería</h2>
+    <p class="sub">Piezas reales hechas en Astra Print. Toca una foto para verla grande.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <h2>Cómo pedir tu pieza</h2>
+    <p class="sub">Sin formularios largos. Todo se resuelve por chat.</p>
+    <ol class="steps">
+      <li><h3>Cuéntanos tu idea</h3><p>Escríbenos por WhatsApp o Instagram. Una foto o una referencia nos basta para empezar.</p></li>
+      <li><h3>Recibe tu cotización</h3><p>Te decimos el precio, el tamaño, los colores posibles y el tiempo de entrega.</p></li>
+      <li><h3>Imprimimos y enviamos</h3><p>Fabricamos tu pieza y la despachamos con envío nacional.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta" id="cotizar">
+  <div class="wrap">
+    <h2>Cuéntanos qué quieres crear</h2>
+    <p>Respondemos por mensaje y la cotización no tiene ningún compromiso.</p>
+    <a class="btn main" href="https://w.app/pmyacs" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <a class="url" href="https://instagram.com/astraprint_3d" target="_blank" rel="noopener">o escríbenos por DM en @astraprint_3d</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Astra Print 3D · David Mateo Robayo</span>
+    <span><a href="https://instagram.com/astraprint_3d" target="_blank" rel="noopener">@astraprint_3d</a> · Envíos nacionales</span>
+  </div>
+</footer>
+
+<dialog id="lb"><img alt=""><button class="btn ghost" type="button" id="lbx">Cerrar</button></dialog>
+<script>
+/* Para agregar una foto: copia el archivo a la carpeta "imagenes" y añade una línea aquí. */
+var FOTOS=[
+  // {src:"imagenes/llavero-mateo.jpg", cap:"Llavero Mateo"},
+];
+(function(){
+  var grid=document.getElementById('grid'),lb=document.getElementById('lb');
+  if(!FOTOS.length){var d=document.createElement('div');d.className='empty';d.textContent='Pronto verás aquí fotos de nuestras piezas.';grid.appendChild(d)}
+  FOTOS.forEach(function(it){
+    var f=document.createElement('figure'),im=document.createElement('img');
+    im.src=it.src;im.alt=it.cap||'Pieza impresa en 3D por Astra Print';im.loading='lazy';
+    im.addEventListener('click',function(){lb.querySelector('img').src=im.src;lb.querySelector('img').alt=im.alt;lb.showModal()});
+    f.appendChild(im);
+    if(it.cap){var c=document.createElement('figcaption');c.textContent=it.cap;f.appendChild(c)}
+    grid.appendChild(f);
+  });
+  document.getElementById('lbx').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+})();
+</script>
+
+
+</body></html>
